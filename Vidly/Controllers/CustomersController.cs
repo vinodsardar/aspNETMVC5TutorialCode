@@ -45,5 +45,38 @@ namespace Vidly.Controllers
             return View(cd);
             //return Content(String.Format("ID of the Customer : {0}", id));
         }
+
+        public ActionResult New()
+        {
+            NewCustomerViewModel newCustomer = new NewCustomerViewModel();
+            newCustomer.CurrentCustomer = new Customer();
+            newCustomer.MembershipTypes = appDbContext.MembershipTypes.ToList<MembershipType>();
+
+            return View(newCustomer);
+        }
+
+        [HttpPost]
+        public ActionResult Create(NewCustomerViewModel customer)
+        {
+            try
+            {
+
+                if(!ModelState.IsValid)
+                {
+                    customer.MembershipTypes = appDbContext.MembershipTypes.ToList<MembershipType>();
+                    return View("New", customer);
+                }
+                Customer cust = customer.CurrentCustomer;
+                appDbContext.Customers.Add(cust);
+                appDbContext.SaveChanges();
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
+            return RedirectToAction("Index", "Customers");
+        }
     }
 }

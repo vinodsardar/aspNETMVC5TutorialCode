@@ -219,6 +219,14 @@
     <Compile Include="Migrations\201803251221009_addBirthDateToCustomer.Designer.cs">
       <DependentUpon>201803251221009_addBirthDateToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803251913092_modifiedDataTypeForDiscount.cs" />
+    <Compile Include="Migrations\201803251913092_modifiedDataTypeForDiscount.Designer.cs">
+      <DependentUpon>201803251913092_modifiedDataTypeForDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803251939331_forRequired.cs" />
+    <Compile Include="Migrations\201803251939331_forRequired.Designer.cs">
+      <DependentUpon>201803251939331_forRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -231,6 +239,7 @@
     <Compile Include="ViewModel\CustomerDetail.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="ViewModel\MoviesViewModel.cs" />
+    <Compile Include="ViewModel\NewCustomerViewModel.cs" />
     <Compile Include="ViewModel\RandomViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -299,6 +308,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\ById.cshtml" />
+    <Content Include="Views\Customers\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,6 +333,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803251221009_addBirthDateToCustomer.resx">
       <DependentUpon>201803251221009_addBirthDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251913092_modifiedDataTypeForDiscount.resx">
+      <DependentUpon>201803251913092_modifiedDataTypeForDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251939331_forRequired.resx">
+      <DependentUpon>201803251939331_forRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

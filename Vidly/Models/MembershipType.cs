@@ -10,7 +10,7 @@ namespace Vidly.Models
         public byte Id { get; set; }
         public short SingupFree { get; set; }
         public byte DurationInMonth { get; set; }
-        public byte Discount { get; set; }
+        public int Discount { get; set; }
         public string Name { get; set; }
     }
 }
