@@ -1,0 +1,13 @@
+﻿@model Vidly.ViewModel.CustomerViewModel
+
+<h1>Customer information</h1>
+
+@foreach(var customer in Model.Customers)
+{
+    <div>@customer.Name</div>
+
+    @Html.ActionLink(@customer.Name, "ById", "Customers", new { id = @customer.Id }, null);
+
+    <div>@customer.MembershipType.Discount</div>
+    <div>@customer.MembershipType.Name</div>
+}

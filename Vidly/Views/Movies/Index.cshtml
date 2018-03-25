@@ -1,0 +1,10 @@
+﻿@model Vidly.ViewModel.MoviesViewModel
+
+Movie Information
+
+@foreach(var movie in Model.Movies)
+{
+    <div>@movie.Name</div>
+
+    @Html.ActionLink(@movie.Name, "ById", "Movies",new { id = @movie.Id},null);
+}
